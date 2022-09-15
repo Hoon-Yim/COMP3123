@@ -1,13 +1,21 @@
+// Print Helper
+const print_helper = (func, param) => {
+    console.log(`\n${func.name} Test:`);
+    console.log("Parameter: ", param);
+    if (param !== undefined) console.log("Result: ", func(param));
+    else console.log("Result: ", func());
+}
+
 // Exercise 1
-const gretter = myArray => {
+const greeter = myArray => {
     const greetText = "Hello ";
 
     for (const string of myArray) {
         console.log(greetText + string)
     }
 }
-console.log(`${gretter.name} Test:`);
-gretter(["Hoon", "Lisa", "Yoonie", "Danny"]);
+console.log(`\n${greeter.name} Test:`);
+greeter(["Hoon", "Lisa", "Yoonie", "Danny"]);
 
 // Exercise 2
 const capitalize = string => {
@@ -19,23 +27,20 @@ const capitalize = string => {
     const { upper, lower } = object;
     return `${upper + lower}`;
 }
-console.log(`\n${capitalize.name} Test:`);
-console.log(capitalize("sometHing"));
-console.log(capitalize("COMP3123"));
+print_helper(capitalize, "sometHing");
+
 
 // Exercise 3
 const capitalizedColors = colors => {
     return colors.map(color => capitalize(color));
 }
-console.log(`\n${capitalizedColors.name} Test:`);
-console.log(capitalizedColors(['red', 'green', 'blue']));
+print_helper(capitalizedColors, ['red', 'green', 'blue']);
 
 // Exercise 4
 const filterLessThan20 = numbers => {
     return numbers.filter(num => num < 20);
 }
-console.log(`\n${filterLessThan20.name} Test:`);
-console.log(filterLessThan20([1, 60, 34, 30, 20, 5]));
+print_helper(filterLessThan20, [1, 60, 34, 30, 20, 5]);
 
 // Exercise 5
 const calculateSum = numbers => {
@@ -44,10 +49,8 @@ const calculateSum = numbers => {
 const calculateProduct = numbers => {
     return numbers.reduce((prev, num) => prev * num, 1);
 }
-console.log(`\n${calculateSum.name} Test:`);
-console.log(calculateSum([1, 2, 3, 4]));
-console.log(`\n${calculateProduct.name} Test:`);
-console.log(calculateProduct([1, 2, 3, 4]));
+print_helper(calculateSum, [1, 2, 3, 4]);
+print_helper(calculateProduct, [1, 2, 3, 4]);
 
 // Exercise 6
 class Car {
