@@ -1,0 +1,14 @@
+{
+  "name": "comp3123-lab04",
+  "version": "1.0.0",
+  "description": "lab04 exercise",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Hoon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
