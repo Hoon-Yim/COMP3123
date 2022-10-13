@@ -9,8 +9,13 @@ const router = express.Router();
 - add <h1> tag with message "Welcome to ExpressJs Tutorial"
 - Return home.html page to client
 */
-router.get('/home', (req, res) => {
+router.get("/home", (req, res) => {
+    const htmlCont = "<h1>Welcome to Express Tutorial</h1>";
+    fs.writeFileSync(`${__dirname}/home.html`, htmlCont, (e) => {
+
+    });
     res.sendFile(`${__dirname}/home.html`);
+    // res.send("adsf");
 });
 
 /*
