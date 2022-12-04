@@ -25,22 +25,22 @@ export const deleteTodo = id => ({
 const initialState = [
     {
         id: 1,
-        text: 'Create Project',
+        text: 'Clean Room',
         done: true
     },
     {
         id: 2,
-        text: 'Style Components',
+        text: 'Study',
         done: true
     },
     {
         id: 3,
-        text: 'Create Context',
+        text: 'Shop Grocery',
         done: false
     },
     {
         id: 4,
-        text: 'Implement functions',
+        text: 'Do Assignments',
         done: false
     }
 ];
